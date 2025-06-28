@@ -1,73 +1,168 @@
-# Welcome to your Lovable project
+# 🌿 Mindful Grove
 
-## Project info
+> A tranquil, mini-garden experience that turns small self-care moments into lush, living art.
 
-**URL**: https://lovable.dev/projects/ef966358-de2f-408a-ad61-37e4eaaf0e7f
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## How can I edit this code?
+## 🎯 Overview
 
-There are several ways of editing your application.
+Mindful Grove is an interactive wellness garden where users cultivate three distinct "wellness plants" by completing guided self-care activities. Each plant represents a pillar of mental health—Calm, Focus, and Creativity—and grows through consistent, mindful practices rather than mindless clicking.
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ef966358-de2f-408a-ad61-37e4eaaf0e7f) and start prompting.
+### 🌱 Three Wellness Plants
+- **🪷 Calm Lily**: Grows through breathing exercises and mindfulness practices
+- **🌿 Focus Fern**: Thrives when you complete distraction-free work blocks
+- **🌵 Creative Cactus**: Blossoms when you engage in creative writing or sketching
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🎮 Core Mechanics
+- **Guided Wellness Prompts**: Brief, interactive exercises for each plant type
+- **Growth Stages**: Plants evolve from seed → sprout → bud → bloom
+- **3D Visualization**: Beautiful Three.js-powered garden with smooth animations
+- **Progress Tracking**: Visual progress meters and growth statistics
+- **Zen Mode**: Immersive, UI-free garden experience
 
-**Use your preferred IDE**
+### 🌸 Advanced Features
+- **Seasonal Changes**: Garden backgrounds cycle through seasons based on consistency
+- **Streak System**: Daily check-ins unlock special animations and rewards
+- **Ambient Audio**: Gentle nature sounds and feedback chimes
+- **Local Persistence**: Your garden progress is saved locally
+- **Responsive Design**: Beautiful experience across all devices
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend**: React 18 + TypeScript
+- **3D Rendering**: Three.js with React Three Fiber
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **State Management**: Zustand
+- **Build Tool**: Vite
+- **Storage**: LocalStorage with IndexedDB fallback
+- **Animation**: CSS transitions + Three.js animations
 
-Follow these steps:
+## 🚀 Quick Start
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js 18+ or Bun
+- npm, yarn, or bun
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/serene-growth-sanctuary.git
+cd serene-growth-sanctuary
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies (choose one)
+npm install
+# or
+yarn install
+# or
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Start the development server
+npm run dev
+# or
+yarn dev
+# or
+bun dev
+```
 
-**Use GitHub Codespaces**
+Visit `http://localhost:5173` to see your garden!
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Build for Production
 
-## What technologies are used for this project?
+```bash
+# Build the project
+npm run build
+# or
+yarn build
+# or
+bun run build
+```
 
-This project is built with:
+## 🎪 Usage
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. **Start Your Garden**: Visit the app to see your three seedling plants
+2. **Complete Wellness Prompts**: 
+   - Click on any plant to open its wellness prompt
+   - Follow the guided exercises (breathing, focus work, creative writing)
+   - Watch your plant grow as you complete activities
+3. **Track Progress**: Monitor your plants' growth stages and daily streaks
+4. **Enter Zen Mode**: Toggle to hide UI and enjoy your garden in peace
+5. **Build Consistency**: Visit daily to maintain your garden and unlock seasonal changes
 
-## How can I deploy this project?
+## 📁 Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/ef966358-de2f-408a-ad61-37e4eaaf0e7f) and click on Share -> Publish.
+```
+src/
+├── components/
+│   ├── Garden3D.tsx         # Main 3D garden scene
+│   ├── Plant3D.tsx          # Individual 3D plant components
+│   ├── PlantCard.tsx        # Plant info and progress cards
+│   ├── WellnessPrompt.tsx   # Interactive wellness exercises
+│   └── ui/                  # shadcn/ui component library
+├── hooks/
+│   ├── use-mobile.tsx       # Mobile device detection
+│   └── use-toast.ts         # Toast notification system
+├── pages/
+│   ├── Index.tsx            # Main garden page
+│   └── NotFound.tsx         # 404 page
+├── store/
+│   └── gardenStore.ts       # Zustand state management
+└── lib/
+    └── utils.ts             # Utility functions
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🌱 Development Roadmap
 
-Yes, you can!
+- [x] **Phase 1**: Basic React setup and UI components
+- [x] **Phase 2**: Three.js integration and 3D plant models
+- [x] **Phase 3**: Wellness prompt system
+- [x] **Phase 4**: Growth logic and animations
+- [ ] **Phase 5**: Audio integration and ambient sounds
+- [ ] **Phase 6**: Advanced breathing detection (microphone API)
+- [ ] **Phase 7**: PWA support and offline functionality
+- [ ] **Phase 8**: Social features and garden sharing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎨 Design Philosophy
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Mindful Grove emphasizes:
+- **Gentle Interaction**: No aggressive notifications or pressure
+- **Visual Reward**: Beautiful, organic growth animations
+- **Mindful Moments**: Quality over quantity in wellness practices
+- **Consistency**: Small, daily actions lead to meaningful growth
+- **Tranquility**: Calming colors, smooth animations, and peaceful sounds
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes and test thoroughly
+4. Commit with clear messages: `git commit -m 'Add amazing feature'`
+5. Push to your branch: `git push origin feature/amazing-feature`
+6. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🌟 Acknowledgments
+
+- Inspired by the Japanese concept of "forest bathing" (shinrin-yoku)
+- Built with love for mental health awareness
+- Special thanks to the Three.js and React communities
+
+---
+
+**Remember**: Every breath, every focused minute, and every creative spark grows a living, breathing garden—small moments of care yield beautiful results. 🌿✨
